@@ -1,0 +1,27 @@
+.progress-bar {
+  position: relative;
+  height: 20px;
+}
+.progress-bar__wrapper {
+  position: relative;
+  background-color: silver;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  will-change: transform;
+}
+.progress-bar__line {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+.progress-bar_duration-ltr .progress-bar__line {
+  right: 100%;
+}
+.progress-bar_duration-rtl .progress-bar__line {
+  left: 100%;
+}
