@@ -5,6 +5,7 @@ import './style.scss'
 
 import {ProgressBarComponent} from "./types"
 
+
 export const ProgressBar:ProgressBarComponent = ({
                                                      className,
                                                      progress = 0,
@@ -15,23 +16,22 @@ export const ProgressBar:ProgressBarComponent = ({
 }) => {
 
     const block = bemClassName('progress-bar'),
-          styles = `.${block('line')}, .${block('parallel-visible-line')} {transform: translateX(${progress}%)}`,
+          style = {transform: `translateX(${progress}%)`, ['-ms-transform']: `translateX(${progress}%)`},
           fullFilled = progress === 100,
           blockClasses = blockClassesConcat(block(), {duration, fullFilled}, className)
 
     return (<div className={blockClasses} >
-        <style>{styles}</style>
 
-        <div className={block('wrapper')}>
+        <div className={block('wrapper')} >
             {progressLineWrapperContent}
-            <div className={block('line')}  >
+            <div className={block('line')} style={style} >
                 {lineContent}
             </div>
         </div>
 
         {
             parallelLineContent
-            ? <div className={block('parallel-visible-line')}>
+            ? <div className={block('parallel-visible-line')} style={style} >
                 {parallelLineContent}
               </div>
             : null

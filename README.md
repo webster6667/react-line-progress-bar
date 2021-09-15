@@ -39,7 +39,7 @@ export default function Index() {
                 
                 .progress-bar__line, .progress-bar__parallel-visible-line {transition: transform 0.5s 0s ease;}
                 
-                .progress-bar_full-filled {color: white;}
+                .progress-bar_full-filled {color: green;}
             `
     
     

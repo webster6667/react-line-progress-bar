@@ -7,5 +7,6 @@ export type ProgressBarComponent = (props:{
     className?: string,
     lineContent?: any,
     parallelLineContent?: any,
-    progressLineWrapperContent?: any
+    progressLineWrapperContent?: any,
+    id?: any
 }) => any
