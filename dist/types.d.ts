@@ -1,6 +1,7 @@
 declare let durationTypes: 'ltr' | 'rtl';
 export declare type ProgressBarComponent = (props: {
     progress?: number;
+    maxProgress?: number;
     duration?: typeof durationTypes;
     className?: string;
     lineContent?: any;

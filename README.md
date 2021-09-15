@@ -45,7 +45,7 @@ export default function Index() {
     
         return (<div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} >
             <style>{styles}</style>
-            <ProgressBar progress={progress} parallelLineContent={contentInsideVisibleLine} lineContent={contentInsideProgressLine} duration={duration} progressLineWrapperContent={'hover-me'} />
+            <ProgressBar progress={progress} maxProgress={100} parallelLineContent={contentInsideVisibleLine} lineContent={contentInsideProgressLine} duration={duration} progressLineWrapperContent={'hover-me'} />
         </div>)
 }
 

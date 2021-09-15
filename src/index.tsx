@@ -12,12 +12,14 @@ export const ProgressBar:ProgressBarComponent = ({
                                                      duration = 'ltr',
                                                      lineContent = null,
                                                      parallelLineContent = null,
-                                                     progressLineWrapperContent = null
+                                                     progressLineWrapperContent = null,
+                                                     maxProgress = 100
 }) => {
 
     const block = bemClassName('progress-bar'),
-          style = {transform: `translateX(${progress}%)`, ['-ms-transform']: `translateX(${progress}%)`},
-          fullFilled = progress === 100,
+          progressPercent = progress / maxProgress * 100,
+          style = {transform: `translateX(${progressPercent}%)`, ['-ms-transform']: `translateX(${progressPercent}%)`},
+          fullFilled = progress === maxProgress,
           blockClasses = blockClassesConcat(block(), {duration, fullFilled}, className)
 
     return (<div className={blockClasses} >
