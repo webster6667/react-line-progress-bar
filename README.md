@@ -18,6 +18,11 @@ npm i react-line-progress-bar
 
 ### Initialization
 
+import component styles to main scss style
+```scss
+@import "~react-line-progress-bar/dist/style/index.css";
+```
+
 ```typescript jsx
 import React, {useState} from 'react'
 import { ProgressBar } from 'react-line-progress-bar';
